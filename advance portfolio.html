@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Mukesh | AI & ML Engineer & Developer</title>
+    <meta name="description" content="Portfolio of S. Mukesh - AI & ML Engineer, B.Tech CS at Scaler School of Technology. Explore projects, interactive demos, and skills.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Interactive Canvas Background -->
+    <canvas id="neural-canvas"></canvas>
+
+    <!-- Glowing Cursor Follower -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-name">Mukesh</span>
+                <span class="logo-dot">.</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link"><span>01.</span> About</a>
+                <a href="#skills" class="nav-link"><span>02.</span> Skills</a>
+                <a href="#education" class="nav-link"><span>03.</span> Journey</a>
+                <a href="#projects" class="nav-link"><span>04.</span> Projects</a>
+                <a href="#contact" class="nav-link"><span>05.</span> Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="sound-toggle-btn" id="sound-toggle" title="Toggle Sci-Fi UI Audio">
+                    <i data-lucide="volume-x" id="sound-icon"></i>
+                </button>
+                <a href="#contact" class="btn btn-outline btn-sm magnetic-btn">
+                    <span>Let's Talk</span>
+                    <i data-lucide="sparkles" class="btn-icon"></i>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-pill pulse-badge" data-reveal="fade-down">
+                        <span class="pulse-dot"></span>
+                        <span>Available for Innovative AI & Engineering Roles</span>
+                    </div>
+
+                    <h1 class="hero-title" data-reveal="fade-up" data-delay="100">
+                        Hi, I'm <span class="gradient-text text-glitch" data-text="S. Mukesh">S. Mukesh</span>
+                    </h1>
+
+                    <div class="typewriter-container" data-reveal="fade-up" data-delay="200">
+                        <span class="type-prefix">Specializing in</span>
+                        <span class="typewriter-text" id="typewriter"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+
+                    <p class="hero-description" data-reveal="fade-up" data-delay="300">
+                        Pursuing <strong>B.Tech in Computer Science</strong> at <strong>Scaler School of Technology</strong>. 
+                        Passionate about building intelligent AI systems, robust software architectures, and impactful platforms that bridge real-world gaps.
+                    </p>
+
+                    <div class="hero-actions" data-reveal="fade-up" data-delay="400">
+                        <a href="#projects" class="btn btn-primary magnetic-btn">
+                            <span>Explore My Work</span>
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-glass magnetic-btn">
+                            <span>Get In Touch</span>
+                            <i data-lucide="mail" class="btn-icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="quick-contact-pills" data-reveal="fade-up" data-delay="500">
+                        <div class="quick-pill copy-trigger" data-copy="9866554560" title="Click to copy phone number">
+                            <i data-lucide="phone"></i>
+                            <span>+91 9866554560</span>
+                            <span class="copy-tooltip">Copy</span>
+                        </div>
+                        <div class="quick-pill copy-trigger" data-copy="sunkari.26bcs10654@scaler.com" title="Click to copy email">
+                            <i data-lucide="mail"></i>
+                            <span>sunkari.26bcs10654@scaler.com</span>
+                            <span class="copy-tooltip">Copy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive 3D / Cyber Terminal Widget -->
+                <div class="hero-visual" data-reveal="fade-left" data-delay="250">
+                    <div class="terminal-card tilt-card" id="hero-terminal">
+                        <div class="terminal-header">
+                            <div class="window-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="terminal-title">mukesh@scaler-core:~$ status.py</div>
+                            <div class="terminal-badge">LIVE</div>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-line"><span class="cmd-prompt">&gt;</span> <span class="cmd-keyword">import</span> engineer <span class="cmd-keyword">as</span> me</p>
+                            <p class="terminal-line"><span class="cmd-prompt">&gt;</span> me.current_focus()</p>
+                            <p class="terminal-output">['Artificial Intelligence', 'Machine Learning', 'AgriTech Innovation']</p>
+                            <p class="terminal-line"><span class="cmd-prompt">&gt;</span> me.institution</p>
+                            <p class="terminal-output highlight-gold">'Scaler School of Technology' (2026 - 2030)</p>
+                            <p class="terminal-line"><span class="cmd-prompt">&gt;</span> me.active_mission</p>
+                            <p class="terminal-output highlight-cyan">'Building Direct Farmer-to-Consumer Market Network'</p>
+                            <p class="terminal-line"><span class="cmd-prompt">&gt;</span> me.state</p>
+                            <p class="terminal-output highlight-green">⚡ Ready to innovate & solve tough computational problems</p>
+                            <div class="terminal-interactive-row">
+                                <span class="cmd-prompt">&gt;</span>
+                                <span class="terminal-cursor-blink">_</span>
+                            </div>
+                        </div>
+                        <div class="card-glow-overlay"></div>
+                    </div>
+
+                    <!-- Floating Holographic Stat Badges -->
+                    <div class="floating-badge badge-1">
+                        <i data-lucide="cpu" class="badge-icon"></i>
+                        <div>
+                            <strong>AI / ML</strong>
+                            <span>Deep Tech Enthusiast</span>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i data-lucide="code-2" class="badge-icon"></i>
+                        <div>
+                            <strong>Clean Code</strong>
+                            <span>Python • Java • Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-down-indicator">
+                <a href="#about" aria-label="Scroll down">
+                    <span class="mouse-icon">
+                        <span class="mouse-wheel"></span>
+                    </span>
+                    <span class="scroll-text">EXPLORE</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-subtitle">// 01. INTRODUCING ME</span>
+                    <h2 class="section-title">Driven by Curiosity, Powered by Code</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-bio-card tilt-card" data-reveal="fade-right">
+                        <div class="bio-avatar-wrapper">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-ring ring-secondary"></div>
+                            <div class="avatar-inner">
+                                <span class="avatar-initials">SM</span>
+                                <div class="avatar-scan-line"></div>
+                            </div>
+                        </div>
+                        <div class="bio-content">
+                            <h3>S. Mukesh</h3>
+                            <p class="bio-tag">Undergraduate at Scaler School of Technology</p>
+                            <p class="bio-desc">
+                                I am an ambitious engineering student diving deep into the intersections of 
+                                <strong>Artificial Intelligence, Data Systems, and Software Engineering</strong>.
+                                I love tackling intricate algorithmic problems, exploring machine learning models, 
+                                and conceptualizing tech solutions that directly improve people's everyday lives.
+                            </p>
+                            <div class="bio-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-num counter" data-target="100">0</span><span class="metric-suffix">%</span>
+                                    <span class="metric-label">Dedication</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-num counter" data-target="2026">0</span>
+                                    <span class="metric-label">Cohort Batch</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-num">24/7</span>
+                                    <span class="metric-label">Curiosity</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glow-overlay"></div>
+                    </div>
+
+                    <div class="about-cards-col" data-reveal="fade-left">
+                        <div class="feature-card tilt-card">
+                            <div class="feature-icon-box">
+                                <i data-lucide="brain-circuit"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>AI & Algorithmic Problem Solving</h4>
+                                <p>Analyzing problem spaces with rigorous logic, structured programming in Python & Java, and mathematical computing.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card tilt-card">
+                            <div class="feature-icon-box cyan">
+                                <i data-lucide="layout"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Modern Web & Computational Tools</h4>
+                                <p>Building interactive, visually stunning interfaces and applying tools like MATLAB and Git for robust workflow management.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card tilt-card">
+                            <div class="feature-icon-box gold">
+                                <i data-lucide="sprout"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Impact-Driven Projects</h4>
+                                <p>Spearheading direct market solutions like the <strong>Farmers to Consumer Platform</strong> to empower grassroot producers through tech.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-subtitle">// 02. TECHNICAL ARSENAL</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-category-card tilt-card" data-reveal="fade-up" data-delay="100">
+                        <div class="cat-header">
+                            <div class="cat-icon"><i data-lucide="code"></i></div>
+                            <h3>Core Programming</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Advanced Logic</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" style="--percent: 88%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-level">OOP & Robust Systems</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" style="--percent: 82%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Problem Solving & Algorithms</span>
+                                    <span class="skill-level">Data Structures</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill" style="--percent: 85%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Web & Engineering Computation -->
+                    <div class="skill-category-card tilt-card" data-reveal="fade-up" data-delay="200">
+                        <div class="cat-header">
+                            <div class="cat-icon cyan"><i data-lucide="globe"></i></div>
+                            <h3>Web & Engineering Computation</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & Semantic Web</span>
+                                    <span class="skill-level">Structure & Accessibility</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill cyan-fill" style="--percent: 92%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS3 & Dynamic UI</span>
+                                    <span class="skill-level">Animations & Responsive Design</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill cyan-fill" style="--percent: 88%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MATLAB</span>
+                                    <span class="skill-level">Engineering Computation & Analysis</span>
+                                </div>
+                                <div class="skill-bar-track">
+                                    <div class="skill-bar-fill cyan-fill" style="--percent: 78%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Developer Tools & Environment -->
+                    <div class="skill-category-card tilt-card" data-reveal="fade-up" data-delay="300">
+                        <div class="cat-header">
+                            <div class="cat-icon emerald"><i data-lucide="terminal"></i></div>
+                            <h3>Developer Ecosystem</h3>
+                        </div>
+                        <div class="tools-tags-cloud">
+                            <div class="tool-tag"><i data-lucide="git-branch"></i> Git Version Control</div>
+                            <div class="tool-tag"><i data-lucide="github"></i> GitHub Workflows</div>
+                            <div class="tool-tag"><i data-lucide="file-code"></i> VS Code Studio</div>
+                            <div class="tool-tag"><i data-lucide="binary"></i> Algorithm Analysis</div>
+                            <div class="tool-tag"><i data-lucide="database"></i> Data Management</div>
+                            <div class="tool-tag"><i data-lucide="sparkles"></i> AI Modeling Concept</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION TIMELINE SECTION -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-subtitle">// 03. ACADEMIC ROADMAP</span>
+                    <h2 class="section-title">Education & Milestones</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Timeline Node 1: Scaler -->
+                    <div class="timeline-item active-node" data-reveal="fade-left">
+                        <div class="timeline-dot">
+                            <div class="dot-inner"></div>
+                            <div class="dot-radar"></div>
+                        </div>
+                        <div class="timeline-card tilt-card">
+                            <div class="timeline-date-badge">2026 — 2030 • CURRENT</div>
+                            <h3 class="timeline-degree">B.Tech in Computer Science</h3>
+                            <h4 class="timeline-inst">Scaler School of Technology</h4>
+                            <p class="timeline-desc">
+                                Immersive hands-on computer science program focused on algorithmic thinking, modern software engineering, AI/ML integration, and scalable system design under industry mentorship.
+                            </p>
+                            <div class="tag-row">
+                                <span class="badge-tag">Computer Science</span>
+                                <span class="badge-tag">AI/ML Engineering</span>
+                                <span class="badge-tag">Problem Solving</span>
+                                <span class="badge-tag">Full-Stack Exploration</span>
+                            </div>
+                            <div class="card-glow-overlay"></div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Node 2: Narayana -->
+                    <div class="timeline-item" data-reveal="fade-right">
+                        <div class="timeline-dot">
+                            <div class="dot-inner"></div>
+                        </div>
+                        <div class="timeline-card tilt-card">
+                            <div class="timeline-date-badge">2023 — 2025</div>
+                            <h3 class="timeline-degree">Intermediate in MPC</h3>
+                            <h4 class="timeline-inst">Narayana Junior College</h4>
+                            <p class="timeline-desc">
+                                Comprehensive focus on Mathematics, Physics, and Chemistry, laying a rock-solid quantitative foundation for advanced computing, logic, and analytical reasoning.
+                            </p>
+                            <div class="tag-row">
+                                <span class="badge-tag">Advanced Mathematics</span>
+                                <span class="badge-tag">Physics</span>
+                                <span class="badge-tag">Analytical Logic</span>
+                            </div>
+                            <div class="card-glow-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-subtitle">// 04. FEATURED INNOVATIONS</span>
+                    <h2 class="section-title">Projects & Concepts</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Main Flagship Project: Farmers to Consumer -->
+                    <div class="project-card flagship-card tilt-card" data-reveal="fade-up">
+                        <div class="project-header-bar">
+                            <span class="badge-flagship">★ FLAGSHIP VENTURE</span>
+                            <span class="badge-status in-progress">In Active Development</span>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-info-side">
+                                <h3 class="project-title">Farmers to Consumer Direct Platform</h3>
+                                <p class="project-tagline">Disrupting traditional agrarian supply chains with peer-to-peer transparency.</p>
+                                <p class="project-text">
+                                    An innovative platform designed to eliminate exploitative middlemen by connecting local farmers directly with urban households and bulk consumers. Features fair dynamic pricing, transparent harvest tracking, and freshness assurance.
+                                </p>
+                                <div class="project-highlights">
+                                    <div class="ph-item">
+                                        <i data-lucide="check-circle-2"></i>
+                                        <span>Direct Farm-to-Kitchen commerce model</span>
+                                    </div>
+                                    <div class="ph-item">
+                                        <i data-lucide="check-circle-2"></i>
+                                        <span>Fair price discovery & crop demand forecasts</span>
+                                    </div>
+                                    <div class="ph-item">
+                                        <i data-lucide="check-circle-2"></i>
+                                        <span>Accessible regional language interfaces for farmers</span>
+                                    </div>
+                                </div>
+                                <div class="project-tech-tags">
+                                    <span>Python Backend</span>
+                                    <span>Modern Web UI</span>
+                                    <span>Agri-Data Pipeline</span>
+                                    <span>Algorithmic Matching</span>
+                                </div>
+                                <div class="project-links">
+                                    <button class="btn btn-primary btn-sm magnetic-btn open-demo-btn" data-project="farmers">
+                                        <span>View System Blueprint</span>
+                                        <i data-lucide="external-link" class="btn-icon"></i>
+                                    </button>
+                                    <a href="#contact" class="btn btn-outline btn-sm magnetic-btn">
+                                        <span>Collaborate on this Idea</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="project-visual-side">
+                                <div class="system-diagram-box">
+                                    <div class="diagram-node node-farmer">
+                                        <i data-lucide="tractor"></i>
+                                        <span>Farmer</span>
+                                    </div>
+                                    <div class="diagram-arrow pulse-arrow">
+                                        <span class="arrow-line"></span>
+                                        <span class="arrow-badge">Direct Protocol</span>
+                                    </div>
+                                    <div class="diagram-node node-core">
+                                        <i data-lucide="cpu"></i>
+                                        <span>Smart Match Engine</span>
+                                    </div>
+                                    <div class="diagram-arrow pulse-arrow">
+                                        <span class="arrow-line"></span>
+                                        <span class="arrow-badge">Zero Middlemen</span>
+                                    </div>
+                                    <div class="diagram-node node-consumer">
+                                        <i data-lucide="shopping-bag"></i>
+                                        <span>Consumer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glow-overlay"></div>
+                    </div>
+
+                    <!-- AI Project Concept 2 -->
+                    <div class="project-card tilt-card" data-reveal="fade-up" data-delay="150">
+                        <div class="project-header-bar">
+                            <span class="badge-status concept">AI Research Concept</span>
+                        </div>
+                        <div class="project-inner">
+                            <div class="project-icon-box"><i data-lucide="scan-face"></i></div>
+                            <h3 class="project-title">Smart Crop Disease Vision Classifier</h3>
+                            <p class="project-text">
+                                Conceptual AI computer-vision pipeline to detect leaf blight and plant pathologies from smartphone camera imagery with high confidence scores.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Python</span>
+                                <span>Computer Vision</span>
+                                <span>Tensor Computation</span>
+                            </div>
+                        </div>
+                        <div class="card-glow-overlay"></div>
+                    </div>
+
+                    <!-- AI Project Concept 3 -->
+                    <div class="project-card tilt-card" data-reveal="fade-up" data-delay="250">
+                        <div class="project-header-bar">
+                            <span class="badge-status concept">Computational Model</span>
+                        </div>
+                        <div class="project-inner">
+                            <div class="project-icon-box cyan"><i data-lucide="line-chart"></i></div>
+                            <h3 class="project-title">Algorithmic Market Yield Predictor</h3>
+                            <p class="project-text">
+                                MATLAB and mathematical regression model predicting agricultural commodity price fluctuations using historical weather and harvest cycles.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>MATLAB</span>
+                                <span>Statistical Modeling</span>
+                                <span>Data Structures</span>
+                            </div>
+                        </div>
+                        <div class="card-glow-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-subtitle">// 05. REACH OUT</span>
+                    <h2 class="section-title">Let's Connect & Create</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards Side -->
+                    <div class="contact-info-panel" data-reveal="fade-right">
+                        <h3 class="contact-lead-title">Have a project, opportunity, or interesting challenge?</h3>
+                        <p class="contact-lead-desc">
+                            I'm always eager to collaborate on AI/ML innovations, innovative platforms, or join visionary teams. My inbox and phone are always open!
+                        </p>
+
+                        <div class="contact-methods">
+                            <!-- Phone -->
+                            <div class="contact-method-card tilt-card copy-trigger" data-copy="9866554560">
+                                <div class="cm-icon"><i data-lucide="phone-call"></i></div>
+                                <div class="cm-details">
+                                    <span class="cm-label">Direct Phone / WhatsApp</span>
+                                    <span class="cm-val">+91 9866554560</span>
+                                </div>
+                                <button class="cm-action-btn" title="Copy Phone Number">
+                                    <i data-lucide="copy"></i>
+                                </button>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="contact-method-card tilt-card copy-trigger" data-copy="sunkari.26bcs10654@scaler.com">
+                                <div class="cm-icon cyan"><i data-lucide="mail"></i></div>
+                                <div class="cm-details">
+                                    <span class="cm-label">Official Scaler Email</span>
+                                    <span class="cm-val">sunkari.26bcs10654@scaler.com</span>
+                                </div>
+                                <button class="cm-action-btn" title="Copy Email">
+                                    <i data-lucide="copy"></i>
+                                </button>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="contact-method-card tilt-card">
+                                <div class="cm-icon emerald"><i data-lucide="map-pin"></i></div>
+                                <div class="cm-details">
+                                    <span class="cm-label">Base Location</span>
+                                    <span class="cm-val">India • Scaler School of Tech</span>
+                                </div>
+                                <div class="cm-status-tag">Available Worldwide</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animated Interactive Form -->
+                    <div class="contact-form-panel tilt-card" data-reveal="fade-left">
+                        <div class="form-header">
+                            <span class="form-title-badge"><i data-lucide="send"></i> Direct Dispatch</span>
+                            <h3>Send Mukesh a Message</h3>
+                        </div>
+
+                        <form id="contact-form" class="animated-form" novalidate>
+                            <div class="form-floating-group">
+                                <input type="text" id="user-name" name="name" class="form-input" placeholder=" " required>
+                                <label for="user-name" class="form-label">Your Full Name</label>
+                                <div class="input-focus-border"></div>
+                            </div>
+
+                            <div class="form-floating-group">
+                                <input type="tel" id="user-phone" name="phone" class="form-input" placeholder=" " required>
+                                <label for="user-phone" class="form-label">Your Mobile / Contact No.</label>
+                                <div class="input-focus-border"></div>
+                            </div>
+
+                            <div class="form-floating-group">
+                                <textarea id="user-message" name="message" class="form-input form-textarea" rows="4" placeholder=" " required></textarea>
+                                <label for="user-message" class="form-label">Ask something or share project details...</label>
+                                <div class="input-focus-border"></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block magnetic-btn" id="submit-btn">
+                                <span>Transmit Message</span>
+                                <i data-lucide="send" class="btn-icon"></i>
+                            </button>
+                        </form>
+
+                        <div id="form-success-toast" class="success-toast hidden">
+                            <i data-lucide="check-circle-2"></i>
+                            <div>
+                                <h4>Message Transmitted!</h4>
+                                <p>Thank you for reaching out, Mukesh will respond promptly.</p>
+                            </div>
+                        </div>
+                        <div class="card-glow-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#hero" class="footer-logo">S. Mukesh<span>.</span></a>
+                <p>B.Tech CS @ Scaler School of Technology • Future-focused AI & Software Engineer</p>
+            </div>
+            <div class="footer-center">
+                <p>© <span id="current-year">2026</span> S. Mukesh. Crafted with cutting-edge CSS & JS animations.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top-btn" aria-label="Back to Top">
+                    <i data-lucide="arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Blueprint Modal for Farmers Platform -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-window">
+            <button class="modal-close-btn" id="modal-close" aria-label="Close Modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge">ARCHITECTURAL BLUEPRINT</span>
+                <h2>Farmers to Consumer Direct Platform</h2>
+                <p class="modal-lead">Concept and System Design by S. Mukesh</p>
+            </div>
+            <div class="modal-body">
+                <div class="blueprint-section">
+                    <h4><i data-lucide="target"></i> Problem Statement</h4>
+                    <p>Conventional agricultural supply chains involve multiple layers of middlemen, resulting in farmers receiving less than 30% of end-consumer price while urban consumers pay exorbitant rates for stale produce.</p>
+                </div>
+                <div class="blueprint-section">
+                    <h4><i data-lucide="cpu"></i> Technological Solution</h4>
+                    <ul>
+                        <li><strong>Geo-Clustering:</strong> Algorithmic matching of harvest lots with nearby consumer hubs to minimize transportation waste.</li>
+                        <li><strong>Transparent Pricing Engine:</strong> Dynamic daily market quotes based on demand-supply indices, guaranteeing high farmer margins.</li>
+                        <li><strong>Direct Communication:</strong> Voice and text channels tailored for regional languages to ensure maximum accessibility.</li>
+                    </ul>
+                </div>
+                <div class="blueprint-section">
+                    <h4><i data-lucide="layers"></i> Current Stage</h4>
+                    <p>Feasibility modeling, user flow mapping, and backend computational logic design in Python.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#contact" class="btn btn-primary btn-sm modal-contact-link">Discuss Collaboration</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast for Copied Info -->
+    <div id="copy-toast" class="copy-toast">
+        <i data-lucide="check"></i>
+        <span id="copy-toast-msg">Copied to clipboard!</span>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
